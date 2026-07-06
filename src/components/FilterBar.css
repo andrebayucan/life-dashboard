@@ -1,0 +1,44 @@
+.filter-bar {
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: none;
+    padding: 20px;
+    gap: 30px;
+}
+
+.range-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.range-bar {
+    width: 100%;
+    height: 30px;
+}
+
+input[type="range"].range-bar {
+    accent-color: rgb(87, 216, 70);
+}
+
+.input-box {
+    width: 200px;
+    height: 20px;
+}
+
+input[type="text"].input-box {
+    background-color: rgb(246, 246, 246);
+    color: rgb(98, 98, 98);
+    border: 4px solid rgb(68, 112, 77);
+    border-radius: 6px;
+    font-size: 1.2em;
+    font-family: Garamond, serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+input.input-box::placeholder {
+    color: rgb(98, 98, 98);
+    font-family: Garamond, serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+}

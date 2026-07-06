@@ -1,0 +1,25 @@
+.stat-div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(179, 215, 178, 0.8);
+    color: rgb(29, 44, 33);
+    border-radius: 25px;
+    padding: 5px;
+    line-height: 1;
+    overflow: auto;
+}
+
+.stat-name-text {
+    font-size: 25px;
+}
+
+.stat-value-text {
+    font-size: 30px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
