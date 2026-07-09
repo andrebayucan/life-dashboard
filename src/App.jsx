@@ -82,28 +82,17 @@ function App() {
   }, []);
 
   return (
-    <div className="whole-page">
-
-      <div className="top-row">
-        <div className="top-header-text">
-          🌿 Life Dashboard
-        </div>
+    <div className="bottom-row">
+      <div className="side-statistics">
+        <StatisticCard statName="Least Recorded Organism" statValue={leastRecorded}></StatisticCard>
+        <StatisticCard statName="Most Common Year" statValue={mostYears}></StatisticCard>
+        <StatisticCard statName="Most Common Month" statValue={mostMonths}></StatisticCard>
       </div>
 
-      <div className="bottom-row">
-        <div className="side-statistics">
-          <StatisticCard statName="Least Recorded Organism" statValue={leastRecorded}></StatisticCard>
-          <StatisticCard statName="Most Common Year" statValue={mostYears}></StatisticCard>
-          <StatisticCard statName="Most Common Month" statValue={mostMonths}></StatisticCard>
-
-        </div>
-
-        <div className="main-dashboard">
-          <FilterBar list={list} updateResults={setFilteredResults} minObservations={leastObservations} maxObservations={mostObservations}/>
-          <DashboardTable list={list} filteredList={filteredResults}/>
-        </div>
+      <div className="main-dashboard">
+        <FilterBar list={list} updateResults={setFilteredResults} minObservations={leastObservations} maxObservations={mostObservations}/>
+        <DashboardTable list={list} filteredList={filteredResults}/>
       </div>
-
     </div>
   )
 }

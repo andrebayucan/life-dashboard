@@ -28,3 +28,8 @@ td {
   vertical-align: top;
   height: auto;
 }
+
+.table-display a {
+    color: inherit;
+    text-decoration: underline;
+}

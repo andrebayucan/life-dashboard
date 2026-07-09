@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import './DashboardTable.css'
 
 const DashboardTable = ({list, input, sliderValue, filteredList}) => {
@@ -14,7 +15,9 @@ const DashboardTable = ({list, input, sliderValue, filteredList}) => {
                 {
                     filteredList?.map(item => (
                         <tr key={item.uuid}>
-                            <td>{item.taxon.name}</td>
+                            <td>
+                                <Link to={`/lifeDetails/${item.uuid}`}>{item.taxon.name}</Link>
+                            </td>
                             <td>{item.observed_on_details.date}</td>
                             <td>{item.taxon.observations_count}</td>
                         </tr>
