@@ -1,14 +1,14 @@
 .page-header {
-    width: 100%;
+    width: 100vw;
     height: 15vh;
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 500px;
+    background-color: rgb(255, 255, 255);
+    gap: 10%;
     flex-shrink: 0;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
 }
 
 .page-header h1 {

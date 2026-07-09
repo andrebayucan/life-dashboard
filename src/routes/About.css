@@ -1,0 +1,6 @@
+.about-box {
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    background-color: rgba(98, 191, 98, 0.8);
+}

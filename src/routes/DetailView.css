@@ -1,0 +1,41 @@
+.details-box {
+    height: 80%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.details-name {
+    font-style: italic;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.details-box ul {
+    list-style-type: none;
+    line-height: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.details-box li {
+    font-size: 30px;
+}
+
+.details-box img {
+    aspect-ratio: 1 / 1;
+    width: 150px;
+}
+
+.left-bold {
+    font-weight: bold;
+}
+
+.details-box a {
+    color: rgb(48, 89, 76);
+    text-decoration: underline;
+}
