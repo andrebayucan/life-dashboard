@@ -1,6 +1,28 @@
 .about-box {
-    width: 50vh;
+    width: 80vw;
     height: 50vh;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-color: rgba(98, 191, 98, 0.8);
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 15px;
+    overflow: auto;
+    color: white;
+}
+
+.about-box h1 {
+    font-size: 60px;
+    color:rgb(246, 221, 31);
+}
+
+.about-box h2 {
+    font-size: 30px;
+}
+
+.about-box p {
+    font-size: 20px;
+    margin-top: 30px;
 }
