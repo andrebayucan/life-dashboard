@@ -67,17 +67,17 @@ function App() {
     setMostYears(maxYears)
     setMostMonths(await monthsToString(maxMonths))
   }
-  
-  const fetchAllItemsData = async () => {
-    let query = "https://api.inaturalist.org/v1/observations?page=1&per_page=12&photos=true&identified=true&quality_grade=research&order_by=random"
-    const response = await fetch(query)
-    const json = await response.json()
-    setList(json.results)
-
-    setStatisticsData(json.results).catch(console.error)
-  }
 
   useEffect(() => {
+    const fetchAllItemsData = async () => {
+      let query = "https://api.inaturalist.org/v1/observations?page=1&per_page=12&photos=true&identified=true&quality_grade=research&order_by=random"
+      const response = await fetch(query)
+      const json = await response.json()
+      setList(json.results)
+
+      setStatisticsData(json.results).catch(console.error)
+    }
+    
     fetchAllItemsData().catch(console.error)
   }, []);
 

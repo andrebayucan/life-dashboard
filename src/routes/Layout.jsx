@@ -5,7 +5,9 @@ const Layout = () => {
     return (
         <div className="whole-page">
             <header className="page-header">
-                <h1>🌿 Life Dashboard</h1>
+                <h1 className="bold-text italic-text">
+                    <Link to="/">🌿 Life Dashboard</Link>
+                </h1>
                 <nav className="nav-bar">
                     <Link to="/">Home</Link>
                     <Link to="/charts">Charts</Link>
