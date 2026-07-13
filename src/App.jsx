@@ -3,6 +3,7 @@ import './App.css'
 import StatisticCard from './components/StatisticCard.jsx'
 import DashboardTable from './components/DashboardTable.jsx'
 import FilterBar from './components/FilterBar.jsx'
+import Charts from './components/Charts'
 
 function App() {
   const [list, setList] = useState(null)
@@ -38,9 +39,9 @@ function App() {
     for (let index = 0; index < results.length; index++) {
       if (results[index].taxon.observations_count < minSeen) {
         minSeen = results[index].taxon.observations_count
-        leastSeenOrganisms = [results[index].taxon.name]
+        leastSeenOrganisms = [{ name: results[index].taxon.name, id: [results[index].taxon.id]}]
       } else if (results[index].taxon.observations_count == minSeen) {
-        leastSeenOrganisms.push(results[index].taxon.name)
+        leastSeenOrganisms.push({ name: results[index].taxon.name, id: [results[index].taxon.id]})
       }
 
       yearFrequencies[results[index].observed_on_details.year] = (yearFrequencies[results[index].observed_on_details.year] || 0) + 1
@@ -84,7 +85,7 @@ function App() {
   return (
     <div className="bottom-row">
       <div className="side-statistics">
-        <StatisticCard statName="Least Recorded Organism" statValue={leastRecorded}></StatisticCard>
+        <StatisticCard statName="Least Recorded Organism" statValue={leastRecorded.map(organism => organism.name)}></StatisticCard>
         <StatisticCard statName="Most Common Year" statValue={mostYears}></StatisticCard>
         <StatisticCard statName="Most Common Month" statValue={mostMonths}></StatisticCard>
       </div>
@@ -93,6 +94,8 @@ function App() {
         <FilterBar list={list} updateResults={setFilteredResults} minObservations={leastObservations} maxObservations={mostObservations}/>
         <DashboardTable list={list} filteredList={filteredResults}/>
       </div>
+      
+      <Charts organisms={leastRecorded}/>
     </div>
   )
 }

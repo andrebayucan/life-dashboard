@@ -6,7 +6,7 @@ const StatisticCard = ({statName, statValue}) => {
             <div className="stat-name-text">
                 {`${statName}` + (statValue.length > 1 ? "s" : "") + ":"}
             </div>
-            <div className="stat-value-text">
+            <div className="stat-value-text bold-text">
                 {statValue.length > 1 ? statValue.join(", ") : statValue}
             </div>
         </div>

@@ -10,7 +10,6 @@ const Layout = () => {
                 </h1>
                 <nav className="nav-bar">
                     <Link to="/">Home</Link>
-                    <Link to="/charts">Charts</Link>
                     <Link to="/about">About</Link>
                 </nav>
             </header>

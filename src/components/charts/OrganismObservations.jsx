@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react'
 import { ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 /* import { RechartsDevtools, RECHARTS_DEVTOOLS_PORTAL_ID } from '@recharts/devtools'; */
-import './OrganismObservations.css'
+import './sharedCharts.css'
 
-const OrganismObservations = ({taxon_id}) => {
+const OrganismObservations = ({taxon_id, name}) => {
 
     const [ recentObservations, setRecentObservations ] = useState([])
+    
+    useEffect(() => {
+        console.log(recentObservations)
+    }, [recentObservations])
     
     const setStackingOrder = (observationsList) => {
         let yCounts = {}
@@ -69,38 +73,38 @@ const OrganismObservations = ({taxon_id}) => {
     }
 
     return (
-        <div className="scatter-chart">
-            <h1>30 Most Recent Observations of this Organism</h1>
-            <h2>Click an observation to visit its record!</h2>
+        <div className="chart">
+            <h2>30 Most Recent Observations of {name}</h2>
+            <h3>Click an observation to visit its record!</h3>
             <ScatterChart
                 style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1}}
                 responsive
                 margin={{
-                top: 20,
-                right: 10,
-                bottom: 30,
-                left: 10,
+                    top: 10,
+                    right: 20,
+                    bottom: 40,
+                    left: 10
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis label={{value: 'Date(s)', position: 'insideBottom', offset: -20}} dataKey="date" type="category" allowDuplicatedCategory={false} name="Date" />
+                <XAxis label={{value: "Date(s)", position: "insideBottom", offset: -10}} dataKey="date" type="category" allowDuplicatedCategory={false} name="Date" tick={{fontSize: "0.8em"}}/>
                 <YAxis hide={true} dataKey="value" type="number" name="Stack Height" />
                 <ZAxis dataKey="url" type="category" name="link" />
                 <Tooltip content={CustomTooltip} cursor={{ strokeDasharray: '3 3' }} />
-                <Legend verticalAlign="top" />
-                <Scatter name="Casual" data={recentObservations.filter(observation => observation.quality == "casual")} fill="#d31e1eff" isAnimationActive={true}
+                <Legend verticalAlign="top" wrapperStyle={{paddingBottom: 40}}/>
+                <Scatter name="Casual" data={recentObservations.sort((a, b) => a.date.localeCompare(b.date)).filter(observation => observation.quality == "casual")} fill="#d31e1eff" isAnimationActive={true}
                     onClick={(data) => {
                         window.open(data.url, "_blank").focus()
                     }}
                     style={{cursor: "pointer"}}
                 />
-                <Scatter name="Needs ID" data={recentObservations.filter(observation => observation.quality == "needs_id")} fill="#c27707ff" isAnimationActive={true}
+                <Scatter name="Needs ID" data={recentObservations.sort((a, b) => a.date.localeCompare(b.date)).filter(observation => observation.quality == "needs_id")} fill="#c27707ff" isAnimationActive={true}
                     onClick={(data) => {
                         window.open(data.url, "_blank").focus()
                     }}
                     style={{cursor: "pointer"}}
                 />
-                <Scatter name="Research Grade" data={recentObservations.filter(observation => observation.quality == "research")} fill="#37b618ff" isAnimationActive={true}
+                <Scatter name="Research Grade" data={recentObservations.sort((a, b) => a.date.localeCompare(b.date)).filter(observation => observation.quality == "research")} fill="#37b618ff" isAnimationActive={true}
                     onClick={(data) => {
                         window.open(data.url, "_blank").focus()
                     }}

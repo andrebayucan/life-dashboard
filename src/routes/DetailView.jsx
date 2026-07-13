@@ -88,7 +88,7 @@ const DetailView = () => {
                     </li>
                 </ul>
 
-                <OrganismObservations taxon_id={fullDetails.taxonId}></OrganismObservations>
+                <OrganismObservations taxon_id={fullDetails.taxonId} name={fullDetails.name}></OrganismObservations>
             </div>
         )
     }

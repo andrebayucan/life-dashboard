@@ -22,12 +22,11 @@
 }
 
 .main-dashboard {
-    width: 80%;
+    width: 100%;
     min-width: 500px;
-    height: 85vh;
+    height: 100%;
     background-color: rgba(245, 245, 245, 0.8);
     border-radius: 5px;
     color: black;
     overflow: auto;
-    padding: 10px;
 }

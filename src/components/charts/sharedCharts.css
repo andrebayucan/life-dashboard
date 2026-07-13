@@ -1,4 +1,4 @@
-.scatter-chart {
+.chart {
     width: 100%;
     height: auto;
     display: flex;
@@ -7,15 +7,7 @@
     align-items: center;
 }
 
-.scatter-chart h1 {
+.chart h2 {
     color: black;
-    font-size: 45px;
-    margin-top: 80px;
-    line-height: 50px;
-
+    margin-top: 30px;
 }
-
-.scatter-chart h2 {
-    color: black;
-}
-

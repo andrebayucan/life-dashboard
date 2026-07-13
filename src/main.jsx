@@ -5,7 +5,7 @@ import './index.css'
 import App from './App'
 import Layout from './routes/Layout'
 import DetailView from './routes/DetailView'
-import Charts from './routes/Charts'
+import Charts from './components/Charts'
 import About from './routes/About'
 import NotFound from './routes/NotFound'
 
@@ -15,7 +15,6 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
-          <Route path="/charts" element={<Charts />} />
           <Route path="/about" element={<About />} />
           <Route path="/lifeDetails/:id" element={<DetailView />}/>
           <Route path="*" element={<NotFound />}/>
