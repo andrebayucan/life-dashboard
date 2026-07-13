@@ -1,42 +1,36 @@
-# Web Development Project 5 - Life Dashboard
+# Web Development Project 6 - *Life Dashboard*
 
-Submitted by: Andre Bayucan
+Submitted by: **Andre Bayucan**
 
-This web app: View a variety of statistics about several different organisms using a search bar and range slider as filtering options.
+This web app: **Life Dashboard displays information regarding organism observations around the world, providing users with search filters and chart data.**
 
-Time spent: 6 hours spent in total
+Time spent: **9** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [x] **`useEffect` React hook and `async`/`await` are used**
-- [x] **The app dashboard includes at least three summary statistics about the data** 
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - *insert details here*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [x] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar 
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
+- [x] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
+- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
 
-The following **optional** features are implemented:
+The following **additional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-- [x] Filters use different input types
-  - e.g., as a text input, a dropdown or radio selection, and/or a slider
-- [x] The user can enter specific bounds for filter values
-
+- [x] An organism's detail view displays a chart of its 30 most recent observations
+  - [x] Clicking a point on this graph takes the user to the site url of the observation
+- [x] Invalid pages display error messages
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<video src="https://github.com/user-attachments/assets/bf4786bf-cbde-467c-a507-15ade612d59f" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/f522b954-c22e-4ef3-875c-0888c2297695" autoplay loop muted playsinline></video>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with QuickTime Player  
@@ -47,7 +41,7 @@ GIF created with QuickTime Player
 
 ## Notes
 
-When creating my summary statistics, I realized that multiple organisms could satisfy any one statistic. For example, different months could all share the same most common frequency, requiring me to use a for loop to iterate through the data. I would then use lists to account for summary statistics with multiple answers and separate them with commas on the initial mount.
+The most difficult part of the process was figuring out how to graph my data with recharts. Within my chart components, I needed to reformat my data into arrays of objects and ensure that dates would be ordered chronologically. In OrganismObservations, I processed the dates by converting their ints to date names, shortening them to three letters, and sorting them using the toLocaleString() method. Although it continued to take trial and error to configure the formatting of my charts, I was able to read through the library's documentation and complete my data visualizations.
 
 ## License
 
