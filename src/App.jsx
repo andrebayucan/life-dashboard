@@ -71,7 +71,7 @@ function App() {
 
   useEffect(() => {
     const fetchAllItemsData = async () => {
-      let query = "https://api.inaturalist.org/v1/observations?page=1&per_page=12&photos=true&identified=true&quality_grade=research&order_by=random"
+      let query = "https://api.inaturalist.org/v1/observations?page=1&per_page=1000&photos=true&identified=true&quality_grade=research&order_by=random"
       const response = await fetch(query)
       const json = await response.json()
       setList(json.results)
