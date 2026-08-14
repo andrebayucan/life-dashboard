@@ -19,7 +19,7 @@ const YearReport = () => {
         const currentYear = new Date().getFullYear()
         setDisplayYear(currentYear)
         for (let monthNum = 1; monthNum <= 12; monthNum++) {
-            let query = `https://api.inaturalist.org/v1/observations?page=1&per_page=0&month=${monthNum}&year=${currentYear - 1}`
+            let query = `https://api.inaturalist.org/v1/observations?page=1&per_page=0&month=${monthNum}&year=${currentYear}`
             const response = await fetch(query)
             const json = await response.json()
             tempData.push({ month: monthToString(monthNum), numObservations: await json.total_results })
