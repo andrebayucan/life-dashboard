@@ -36,10 +36,6 @@ const YearReport = () => {
         getData()
     },[])
 
-    useEffect(() => {
-        console.log(monthAmounts)
-    },[monthAmounts])
-
     return (
         <div className="chart">
             <h2>Number of Observations in {displayYear}</h2>

@@ -12,10 +12,6 @@ const OrganismObservations = ({taxon_id, name}) => {
         research: []
     })
     const [ yearList, setYearList ] = useState([])
-
-    useEffect(() => {
-        console.log(sortedObservations)
-    }, [sortedObservations])
     
     const getNumObservations = () => {
         let total = 0
