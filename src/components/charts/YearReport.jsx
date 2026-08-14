@@ -16,10 +16,10 @@ const YearReport = () => {
 
     const fetchMonthlyData = async () => {
         const tempData = []
-        const previousYear = new Date().getFullYear() - 1
-        setDisplayYear(previousYear)
+        const currentYear = new Date().getFullYear()
+        setDisplayYear(currentYear)
         for (let monthNum = 1; monthNum <= 12; monthNum++) {
-            let query = `https://api.inaturalist.org/v1/observations?page=1&per_page=0&month=${monthNum}&year=${previousYear}`
+            let query = `https://api.inaturalist.org/v1/observations?page=1&per_page=0&month=${monthNum}&year=${currentYear - 1}`
             const response = await fetch(query)
             const json = await response.json()
             tempData.push({ month: monthToString(monthNum), numObservations: await json.total_results })
