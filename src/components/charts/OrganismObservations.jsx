@@ -15,7 +15,6 @@ const OrganismObservations = ({taxon_id, name}) => {
 
     useEffect(() => {
         console.log(sortedObservations)
-        console.log(yearList)
     }, [sortedObservations])
     
     const getNumObservations = () => {
@@ -133,18 +132,19 @@ const OrganismObservations = ({taxon_id, name}) => {
                     top: 10,
                     right: 20,
                     bottom: 40,
-                    left: 10
+                    left: 20
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis label={
                     {value: "Date(s)", position: "insideBottom", offset: -10}}
                     dataKey="year"
-                    type="category"
+                    type="number"
                     allowDuplicatedCategory={false}
                     name="Date"
                     tick={{fontSize: "0.8em"}}
                     ticks={yearList}
+                    domain={[Math.min(...yearList), Math.max(...yearList)]}
                 />
                 <YAxis hide={true} dataKey="value" type="number" name="Stack Height" />
                 <ZAxis dataKey="url" type="category" name="link" />
