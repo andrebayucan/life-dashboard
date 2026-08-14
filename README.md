@@ -1,48 +1,148 @@
-# Web Development Project 6 - *Life Dashboard*
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
 
-Submitted by: **Andre Bayucan**
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-This web app: **Life Dashboard displays information regarding organism observations around the world, providing users with search filters and chart data.**
+https://life-dashb.netlify.app/
 
-Time spent: **9** hours spent in total
+<a href="https://life-dashb.netlify.app/">
+  <img src="public/site-logo.png" alt="Logo" width="400" height="400">
+</a>
 
-## Required Features
 
-The following **required** functionality is completed:
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- [x] **Clicking on an item in the list view displays more details about it**
-  - Clicking on an item in the dashboard list navigates to a detail view for that item
-  - Detail view includes extra information about the item not included in the dashboard view
-  - The same sidebar is displayed in detail view as in dashboard view
-  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
-- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
-  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
-- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
-  - At least two charts should be incorporated into the dashboard view of the site
-  - Each chart should describe a different aspect of the dataset
+Life Dashboard displays information regarding organism observations around the world, providing users with search filters and chart data. Using the iNaturalist public REST API, a table lists 1000 species records at a time, showing their scientific names, record dates, and the number of observations associated with that creature in the database's system. Each creature record has its own page with extensive information about it, including a picture of the species, the location where it was found, a dot plot showing a maximum of thirty most recent records of that species, and more.
 
-The following **additional** features are implemented:
+### Built With
 
-- [x] An organism's detail view displays a chart of its 30 most recent observations
-  - [x] Clicking a point on this graph takes the user to the site url of the observation
-- [x] Invalid pages display error messages
-## Video Walkthrough
+This application was programmed with Javascript, CSS, and HTML in a React framework.
+* [![React][React.js]][React-url]
 
-Here's a walkthrough of implemented user stories:
+### Features
 
-<video src="https://github.com/user-attachments/assets/f522b954-c22e-4ef3-875c-0888c2297695" autoplay loop muted playsinline></video>
+- **The main dashboard displays 1000 organism records from the iNaturalist database**
+  - Among the organisms in the table, users can view summary statistics about:
+    - The organism with the least number of records
+    - The most common year
+    - The most common month
+  - For each organism record, the table displays the following information:
+    - Scientific name
+    - Date recorded
+    - Total number of records of that organism across the iNaturalist database
+  - Users can search the table for results using the following filters:
+    - Range bar determining the maximum number of records that displayed organisms should have
+    - Textual search bar
+  - Summary charts:
+    - A bar graph reporting the numbers of creature observations recorded for each month of the current year
+    - A dot plot displaying a maximum of thirty most recent records for the least recorded organism in the table
+      - Records are categorized into either "Casual," "Needs ID," or "Research Grade" -- classifications in the iNaturalist database that describe the quality level of information each record presents or lacks
+      - Hovering over a point shows the record's exact date and quality level
+      - Clicking on a point redirects the user to the corresponding record on the iNaturalist site
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with QuickTime Player  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+![Dashboard view screenshot](public/site-screenshots/dashboard-view.png)
+![Dashboard charts screenshot](public/site-screenshots/dashboard-charts.png)
 
-## Notes
+- **Clicking on an organism's name in the dashboard creature table redirects the user to its matching detail view page**
+  -  A creature's detail view page displays additional information about it, including:
+    - Scientific name
+    - Number of records
+    - iNaturalist classification
+      - The database categorizes organisms into various taxonomic classifications, ranging from broad kingdoms like Plantae (Plants) to more specific classes like Actinopterygii (Ray-finned Fishes).
+      - iNaturalist taxa list: https://www.inaturalist.org/taxa
+    - Location name (typically a country)
+    - Coordinates (Longitude/Latitude format)
+    - URL of the iNaturalist record
+    - Default photo
+    - A dot plot displaying a maximum of thirty most recent records for the organism
+      - Records are categorized into either "Casual," "Needs ID," or "Research Grade" -- classifications in the iNaturalist database that describe the quality level of information each record presents or lacks
+      - Hovering over a point shows the record's exact date and quality level
+      - Clicking on a point redirects the user to the corresponding record on the iNaturalist site
 
-The most difficult part of the process was figuring out how to graph my data with recharts. Within my chart components, I needed to reformat my data into arrays of objects and ensure that dates would be ordered chronologically. In OrganismObservations, I processed the dates by converting their ints to date names, shortening them to three letters, and sorting them using the toLocaleString() method. Although it continued to take trial and error to configure the formatting of my charts, I was able to read through the library's documentation and complete my data visualizations.
+![Creature view screenshot](public/site-screenshots/creature-view-top.png)
+![Creature records dot plot screenshot](public/site-screenshots/creature-view-bottom.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running, follow these simple example steps.
+
+### Prerequisites
+
+Please update your npm tool.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/andrebayucan/life-dashboard
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Change git remote url to avoid accidental pushes to base project
+   ```sh
+   git remote set-url origin https://github.com/github_username/repo_name.git
+   git remote -v # confirm the changes
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- DEMO EXAMPLES -->
+## Demo
+
+### Dashboard table, statistics, filtering, and charts
+
+<video src="https://github.com/user-attachments/assets/da5e2b0f-032c-422b-b440-55ba1da7c6fc" autoplay loop muted playsinline></video>
+
+### Creature page view
+
+<video src="https://github.com/user-attachments/assets/00d8aa58-d28e-43e3-a004-d4fb5964bd53" autoplay loop muted playsinline></video>
+
+### Recent records dot plot interaction
+
+<video src="https://github.com/user-attachments/assets/710a991b-da74-4b5b-8409-677efcf3ccd7" autoplay loop muted playsinline></video>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- License -->
 ## License
 
     Copyright [2026] [Andre Bayucan]
@@ -58,3 +158,31 @@ The most difficult part of the process was figuring out how to graph my data wit
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+<!-- CONTACT -->
+## Contact
+
+Andre Bayucan - [LinkedIn](https://www.linkedin.com/in/andrebayucan) - andrebayucan@gmail.com
+
+Project Link: https://github.com/andrebayucan/life-dashboard
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+This project was one of the websites I created for CodePath's WEB102: Intermediate Web Development course. I used the public REST API provided by iNaturalist, linking its main website below.
+
+* [iNaturalist](https://www.inaturalist.org/)
+* [Netlify](https://www.netlify.com/)
+* [CodePath](https://www.codepath.org/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
