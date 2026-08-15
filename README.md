@@ -128,9 +128,15 @@ Please update your npm tool.
 
 ### Dashboard table, statistics, filtering, and charts
 
+https://github.com/user-attachments/assets/004f3e64-c49b-4d93-82ba-1e35c75c39f2
+
 ### Creature page view
 
+https://github.com/user-attachments/assets/f07c5738-dc70-40d7-998a-45e232ad3dc0
+
 ### Recent records dot plot interaction
+
+https://github.com/user-attachments/assets/fd6d55b4-8a5d-41ce-97a5-80ef2622d382
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
