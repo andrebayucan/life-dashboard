@@ -132,7 +132,7 @@ Please update your npm tool.
 
 ### Creature page view
 
-<video src="https://github.com/user-attachments/assets/00d8aa58-d28e-43e3-a004-d4fb5964bd53" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/74f3d278-36f8-4d02-bca9-8c393891bbe2" autoplay loop muted playsinline></video>
 
 ### Recent records dot plot interaction
 
