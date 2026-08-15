@@ -136,6 +136,22 @@ Please update your npm tool.
   Your browser does not support the video tag.
 </video>
 
+<video src="/public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+<video src="/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+<video src="./public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+<video src="./site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
 ### Creature page view
 
 <video src="https://github.com/user-attachments/assets/74f3d278-36f8-4d02-bca9-8c393891bbe2" autoplay loop muted playsinline></video>
