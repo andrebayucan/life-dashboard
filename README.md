@@ -128,9 +128,13 @@ Please update your npm tool.
 
 ### Dashboard table, statistics, filtering, and charts
 
-<video src="./public/site-videos/dashboard-demo-compressed.mp4" autoplay loop muted playsinline></video>
+<video src="public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
-![Dashboard Demo](./public/site-videos/dashboard-demo-compressed.gif)
+<video src="site-videos/dashboard-demo-compressed.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 ### Creature page view
 
