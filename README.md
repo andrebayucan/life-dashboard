@@ -128,7 +128,9 @@ Please update your npm tool.
 
 ### Dashboard table, statistics, filtering, and charts
 
-![Dashboard Demo](public/site-videos/dashboard-demo-compressed.gif)
+<video src="./public/site-videos/dashboard-demo-compressed.mp4" autoplay loop muted playsinline></video>
+
+![Dashboard Demo](./public/site-videos/dashboard-demo-compressed.gif)
 
 ### Creature page view
 
