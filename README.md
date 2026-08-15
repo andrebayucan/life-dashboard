@@ -128,37 +128,9 @@ Please update your npm tool.
 
 ### Dashboard table, statistics, filtering, and charts
 
-<video src="public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
-<video src="site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
-<video src="/public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
-<video src="/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
-<video src="./public/site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
-<video src="./site-videos/dashboard-demo-compressed.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
-
 ### Creature page view
 
-<video src="https://github.com/user-attachments/assets/74f3d278-36f8-4d02-bca9-8c393891bbe2" autoplay loop muted playsinline></video>
-
 ### Recent records dot plot interaction
-
-<video src="https://github.com/user-attachments/assets/710a991b-da74-4b5b-8409-677efcf3ccd7" autoplay loop muted playsinline></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
